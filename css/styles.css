@@ -1,0 +1,682 @@
+:root{
+    --dark-theme: rgb(27,27,27);
+    --light-theme: rgb(247, 245, 245);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--light-theme);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: 'Special Elite', serif;
+    background-color:var(--dark-theme);
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    font-family: 'Roboto', serif;
+    font-size: 1.05em;
+}
+
+#logo{
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.nav-item{
+    list-style: none;
+    font-weight: bold;
+    letter-spacing: .28rem;
+}
+
+.nav-item .active.nav-link{
+    font-weight: 700;
+}
+
+.nav-item a.list-group-item{
+    background-color: transparent;
+    border:none;
+    display: initial;
+    padding: initial;
+}
+
+#mainpage{
+    padding-top: 10vh; 
+    height: 100vh;
+}
+
+/*keyframes at the end in the media queries*/
+
+#mainpage::before{
+    content: "";
+    position:absolute;
+    background-position:center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 120%;
+    opacity: 0.15;
+    z-index: -1;
+    background-image: url("../img/background6.jpg") ;
+    -webkit-animation: backgroundScroll 15s ease-in-out infinite;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-direction: alternate;
+    animation: backgroundScroll 15s ease-in-out infinite;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+    overflow: hidden;
+}
+
+.mainpage h1{
+    font-size: 4em;
+}
+
+.mainpage i{
+    font-size: 1.7em;
+    color: white;
+    display: inline-block;
+    transition: all .6s ease-in-out;
+}
+
+.mainpage i:hover{
+    transform: translateY(-8px);
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.633);
+}
+
+.subheader{
+      font-size:1.8em;
+      text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.582);
+      font-weight: 300;
+}
+
+#about{
+    background-color: var(--light-theme);
+    color:var(--dark-theme);
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    border-left: 1.2vw solid ;
+   /*border-right: 1.2vw solid ; */
+    border-image: url("../img/sides-border-left.png") 20% round;
+    background-image: url(../img/bg-about.png);
+    background-repeat: no-repeat;
+}
+
+.abouttext{
+    text-align: start;
+    font-size: 1.2em;
+}
+
+.icon_razor{
+    object-fit: scale-down;
+}
+
+.mainpage img, .about img{
+    width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main_photo{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+#training{
+    background-color: var(--dark-theme);
+    padding-top: 12vh;
+    font-weight: 300;
+    background-image: url(../img/bg-training.png);
+    background-repeat: no-repeat;
+}
+
+.cennikbtn{
+    font-family: "Raleway", serif;
+    font-weight: 400;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
+.cennikcard{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+.price{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.promo{
+    color:rgb(255, 61, 61);
+    font-size:0.7em;
+}
+
+.trainingtext{
+    text-align: center;
+}
+
+.card{
+    background-position: center;
+    background-size: cover;
+    background-size: 105%;
+}
+
+#trainingcard1{
+    background-image: url("../img/cards/card\ \(2\).jpg");
+    
+}
+
+#trainingcard2{
+    background-image: url("../img/cards/card\ \(1\).jpg");
+}
+
+#trainingcard3{
+    background-image: url("../img/cards/card\ \(3\).jpg");
+}
+
+#trainingcard4{
+    background-image: url("../img/cards/card\ \(4\).jpg");
+}
+
+/*keyframes at the end in the media queries*/
+
+.card:hover{
+    -webkit-animation: backgroundScrollCard 10s ease-in-out 30;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-direction: alternate;
+    animation: backgroundScrollCard 10s ease-in-out 30;
+    animation-fill-mode: forwards;
+    animation-direction: alternate;
+}
+
+.trainingcards .card-body:hover{
+    background-color: rgba(247, 245, 245, 0.685);
+    transition: all .3s ease-in-out;
+    color: var(--dark-theme);
+}
+
+.trainingcards .card-body{
+    color: var(--light-theme);
+    text-shadow: black;
+    font-weight: 400;
+}
+
+.bgcards{
+    background-color: rgba(247, 245, 245, 0.664);
+}
+
+.trainingcards .card-body h2{
+    font-size: 2.4em;
+}
+
+.cardattribute{
+    width: 30em;
+}
+
+#certificates{
+    background-color: var(--light-theme);
+    color:var(--dark-theme);
+    padding-top: 15vh;
+    padding-bottom: 12vh;
+   /* border-left: 1vw solid ; */
+    border-right: 1.2vw solid ;
+    border-image: url("../img/sides-border-right.png") 20% round;
+    background-image: url("../img/bg-certificates.png");
+    background-repeat: no-repeat;
+}
+
+.certificatetext{
+    text-align: start;
+    font-size: 1.2em;
+}
+
+.certificates img{
+    width: 85%;
+    max-width: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#certificates li button{
+    color:var(--dark-theme) !important;
+    font-size: 1.2em;
+}
+#certificates li .active{
+    color: #fff !important;
+    background-color: #dc3545 !important;
+}
+
+#gallery{
+    background-color: var(--dark-theme);
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    background-image: url("../img/bg-gallery.png");
+    background-repeat: no-repeat;
+}
+
+.gallery_container {
+    column-count: 4;
+}
+
+.itemphoto:hover{
+    filter: initial;
+    /* opacity: 0.4; */
+    transition: all .3s ease-in-out;
+}
+
+.itemphoto {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 1em;
+    border-radius: 2px;
+    filter: contrast(75%) brightness(103%);
+    transition: all .3s ease-in-out;
+}
+
+#carousel, .contact iframe{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+
+#opinions{
+    position: relative;
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    text-shadow: 3px 2px 6px rgba(0, 0, 0, 0.582);
+    color:var(--light-theme);
+    font-weight: 400;
+}
+
+#opinions::before{
+    background-color: var(--light-theme);
+    background-attachment: fixed;
+    background-image: url('../img/szkolenie4.jpg');
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    filter: grayscale(30%) brightness(100%) contrast(40%);
+} 
+
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+}
+
+#text-carousel {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+}
+
+#opinions{
+    height: 22em;
+}
+
+.opinions p{
+    font-size: 0.8em;
+}
+
+.opinions figcaption{
+    text-align: end;
+}
+
+#contact{
+    background-color: var(--dark-theme);
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    background-image: url("../img/bg-contact.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contacttext{
+    text-align: center;
+    font-weight: 300;
+}
+
+.modelstext{
+    text-align: center;
+    font-weight: 300;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.google-maps{
+    width: 600px;
+    filter: sepia(15%) contrast(90%);
+}
+
+#address{
+    line-height: 1.5;
+}
+
+#footer{
+    background-color: var(--dark-theme);
+    font-size: 0.9em;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+}
+
+.social{
+    text-decoration: none;
+    color:var(--light-theme);
+    transition:all .5s ease-in-out;
+}
+
+.social:first-of-type:hover{
+    color: rgba(94, 91, 245, 0.7);
+}
+
+.social:last-of-type:hover{
+    color: rgba(252, 88, 88, 0.7);
+}
+
+.social i{
+    transition:all .5s ease-in-out;
+}
+
+.social:first-of-type:hover i{
+    text-shadow: 0px 0px 15px rgba(84, 81, 255, 0.8);
+    color:var(--light-theme);
+}
+
+.social:last-of-type:hover i{
+    text-shadow: 0px 0px 15px rgba(252, 58, 58, 0.8);
+    color:var(--light-theme);
+}
+
+.used-photos-button{
+    position: absolute;
+    opacity: 0.6;
+    cursor: pointer;
+    bottom: 30%;
+}
+
+.used-photos{
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    background: var(--light-theme);
+    width: 50vw;
+    padding: 20px;
+    border: solid 5px var(--dark-theme);
+    border-radius: 5px;
+    color: var(--dark-theme);
+    display: none;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.used-photos .close-button{
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    cursor: pointer;
+}
+
+.used-photos p{
+    margin-bottom: 3px;
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: -220px;
+    right: 20px;
+    opacity: 0.7;
+    width: 2.1em;
+    height: 2.1em;
+    border-radius: 3%;
+    background-color: var(--dark-theme);
+    border-color: var(--light-theme);
+    border: 1;
+    transition: all .5s ease-in-out;
+}
+
+#btn-back-to-top:hover {
+    background-color: seashell !important;
+    color:var(--dark-theme) !important;
+}
+
+.social-buttons{
+    position: fixed;
+    top: 65%;
+    right: -200px;
+    border-color: var(--light-theme);
+    border: 1;
+    transition: all .3s ease-in-out;
+}
+
+.social-buttons button{
+    width: 2.3em;
+    height: 2.3em;
+    transition: all .3s ease-in-out;
+}
+
+#btn-facebook:hover, #btn-instagram:hover{
+    background-color:rgb(255, 255, 255);
+    transition: all .5s ease-in-out;
+}
+
+#btn-facebook:hover{
+    transform: translateY(-0.4em);
+    box-shadow: 0px 0px 15px rgba(84, 81, 255, 0.7);
+}
+
+#btn-instagram:hover{
+    transform: translateY(0.4em);
+    box-shadow: 0px 0px 15px rgba(252, 58, 58, 0.7);
+}
+
+#btn-facebook i, #btn-instagram i{
+    transition: all .5s ease-in-out;
+}
+
+#btn-facebook:hover i{
+    color:rgba(84, 81, 255, 0.7);
+}
+
+#btn-instagram:hover i{
+    color:rgba(252, 58, 58, 0.7);
+}
+
+#btn-facebook{
+    background-color: rgba(84, 81, 255, 0.7);
+    border-radius: 50%;
+}
+
+#btn-instagram{
+    background-color: rgba(252, 58, 58, 0.7);
+    border-radius: 50%;
+}
+
+@media (max-width: 575.98px){
+    #about{
+        border-left: 3.0vw solid ;
+        border-image: url("../img/sides-border-left.png") 12% round;
+    }
+    #certificates{
+        border-right: 3vw solid ;
+        border-image: url("../img/sides-border-right.png") 10% round;
+    }
+    #opinions{
+        height: 35em;
+    }
+    .certificatetext{
+        font-size: 1em;
+    }
+    #address{
+        font-size: 1.3em !important;
+    }
+    .social-buttons{
+        bottom: 20%;
+        top: initial;
+    }
+    .card{
+        background-size: 150%;
+    }
+    .used-photos{
+        width: 85vw;
+        font-size: 0.8rem;
+    }
+    .used-photos-button{
+        position: relative;
+    } 
+}
+
+@media (max-width: 768px){
+    #mainpage{
+        height: 120%;
+    }
+    .abouttext{
+        font-size: 1em;   
+    }
+    #about{
+        background-position-x:-15vw;
+    }
+    #training{
+        background-position-x:-350vw;
+    }
+    #certificates{
+        background-image: url(../img/bg-certificates-mobile.png);
+        background-position-x:-160vw;
+    }
+    .trainingtext{
+        font-size: 0.9em;  
+    }
+    .opinions p{
+        font-size: 0.7em;
+        text-align: start; 
+    }
+    #opinions::before{
+        background-image: url('../img/szkolenie4.jpg');
+        background-size: 170%;
+    } 
+    
+    .gallery_container {
+        column-count: 2;
+    } 
+}
+
+@media (min-width: 576px) and (max-width: 768px){
+    #about{
+        border-left: 2vw solid ;
+        border-image: url("../img/sides-border-left.png") 10% round;
+    }
+    #certificates{
+        border-right: 2vw solid ;
+        border-image: url("../img/sides-border-right.png") 10% round;
+    }
+    .used-photos{
+        width: 80vw;
+        font-size: 0.9rem;
+    } 
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    #about{
+        border-left: 2vw solid ;
+        border-image: url("../img/sides-border-left.png") 10% round;
+    }
+    #certificates{
+        border-right: 2vw solid ;
+        border-image: url("../img/sides-border-right.png") 15% round;
+    }
+    .abouttext{
+        font-size: 1em;   
+    }
+    .trainingtext{
+        font-size: 0.9em;  
+    }
+    .opinions p{
+        font-size: 0.7em;
+        text-align: start; 
+    } 
+    .gallery_container {
+        column-count: 3;
+    }
+    .used-photos{
+        width: 70vw;
+    } 
+}
+
+@media (min-width: 992px){
+    @keyframes backgroundScroll {
+        from {background-size: 120%;}
+        to {background-size: 135%;}
+    }
+    
+    @-webkit-keyframes backgroundScroll {
+        from {background-size: 120%;}
+        to {background-size: 135%;}
+    } 
+
+    @keyframes backgroundScrollCard {
+        from {background-size: 105%;}
+        to {background-size: 135%;}
+    }
+    
+    @-webkit-keyframes backgroundScrollCard {
+        from {background-size: 105%;}
+        to {background-size: 135%;}
+    } 
+}
+
+@media (min-width: 992px) and (max-width:1030px){
+    #navbar{
+        font-size: 0.87em;
+    }
+
+}
+
+@media (max-width: 1199.98px) { 
+    .google-maps{
+        width: 95vw;
+        height:280px;
+    }
+}
+
+@media (max-width: 1399.98px) { 
+    #address{
+        font-size: 1.6em;
+    }
+ }
+
+@media (min-width: 992px) and (max-width:1399.98px){
+    #about{
+        border-left: 1.5vw solid ;
+        border-image: url("../img/sides-border-left.png") 10% round;
+    }
+    #certificates{
+        border-right: 1.5vw solid ;
+        border-image: url("../img/sides-border-right.png") 10% round;
+    }
+}
